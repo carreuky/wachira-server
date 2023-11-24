@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "http://localhost:5173",".vercel.app"
 ]
 
 CORS_ALLOW_METHODS = [
