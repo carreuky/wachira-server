@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os  # Add this import statement
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'events',
     'blogs',
+    "products",
     "rest_framework",
     'django_summernote',
 
@@ -79,7 +82,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",".vercel.app"
+    "http://localhost:5173",
 ]
 
 CORS_ALLOW_METHODS = [
@@ -135,6 +138,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 STATIC_URL = 'static/'
 

@@ -3,6 +3,8 @@ from django.urls import path, include
 urlpatterns = [
     path('event/', include('events.urls')),
     path('blog/', include('blogs.urls')),
+    path('product/', include('products.urls')),
+
     
            
 ]
